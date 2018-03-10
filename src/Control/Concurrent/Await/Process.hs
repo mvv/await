@@ -56,7 +56,6 @@ import Data.ByteString.Char8 ()
 import Control.Applicative (pure, (<$>), (<*>))
 import Control.Monad (void, when, unless)
 import Control.Monad.Base
-import Control.Monad.Abort (onError_)
 import Control.Monad.Exception
 import Control.Concurrent.MVar
 import Control.Concurrent.Event

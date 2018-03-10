@@ -28,8 +28,7 @@ import Control.Monad.Base
 import Control.Monad.Trans.Class
 import Control.Monad.Trans.Control
 import Control.Monad.Trans.Finish
-import Control.Monad.Abort (MonadRecover)
-import Control.Monad.Exception (Exception, SomeException, handle)
+import Control.Monad.Exception (Exception, SomeException, MonadCatch, handle)
 import Control.Concurrent.STM.Lifted
 import Control.Concurrent.STM (throwSTM)
 import GHC.Conc (unsafeIOToSTM)
@@ -70,8 +69,7 @@ data RollbackException = RollbackException deriving (Typeable, Show)
 
 instance Exception RollbackException
 
-atomicallyRT ∷ (AtomicIn μ ν, MonadRecover SomeException ν)
-             ⇒ STMRT α μ α → ν α
+atomicallyRT ∷ (AtomicIn μ ν, MonadCatch ν) ⇒ STMRT α μ α → ν α
 atomicallyRT (STMRT m) = do
   rv ← liftBase $ newIORef Nothing
   handle (\(_ ∷ RollbackException) → liftBase $ fromJust <$> readIORef rv) $

@@ -19,8 +19,7 @@ module Control.Monad.STM.Lifted (
 
 import Control.Monad.Base
 import Control.Monad.Trans.Control
-import Control.Monad.Abort
-import Control.Exception
+import Control.Monad.Exception
 import Control.Monad.STM (STM)
 import qualified Control.Monad.STM as STM
 import GHC.Prim (getMaskingState#,

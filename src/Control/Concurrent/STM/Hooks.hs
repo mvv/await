@@ -25,7 +25,6 @@ import Control.Monad.Trans.Class
 import Control.Monad.Trans.Control
 import Control.Monad.Trans.Reader
 import Control.Monad.Exception
-import Control.Monad.Abort (MonadAbort(..), MonadRecover(..))
 import Control.Concurrent.STM.Lifted
 import Control.Concurrent.STM.Rollback
 

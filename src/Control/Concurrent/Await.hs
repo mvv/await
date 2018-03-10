@@ -50,7 +50,6 @@ import Control.Applicative
 import Control.Monad.Base
 import Control.Monad.Trans.Reader
 import Control.Monad.State.Strict hiding (mapM)
-import Control.Monad.Abort hiding (mapM)
 import Control.Monad.Exception
 import Control.Concurrent.Event
 import Control.Concurrent.STM.Hooks

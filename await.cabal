@@ -35,8 +35,7 @@ Library
                , transformers-base  >= 0.4
                , transformers-abort >= 0.4
                , mtl                >= 2.0
-               , monad-finally      >= 0.1
-               , monad-abort-fd     >= 0.4
+               , monad-finally      >= 0.1.1
                , unix               >= 2.4
                , posix-timer        >= 0.3
                , posix-socket       >= 0.2

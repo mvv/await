@@ -31,7 +31,6 @@ import Data.Timeout
 import Control.Applicative
 import Control.Monad
 import Control.Monad.Base
-import Control.Monad.Abort (MonadRecover(..))
 import Control.Monad.Exception
 import Control.Concurrent.Event
 import Control.Concurrent.STM.Lifted
